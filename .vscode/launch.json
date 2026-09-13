@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Django (Backend)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/backend/manage.py",
+            "args": [
+                "runserver"
+            ],
+            "django": true,
+            "cwd": "${workspaceFolder}/backend"
+        },
+        {
+            "name": "Run Flutter (Mobile)",
+            "type": "dart",
+            "request": "launch",
+            "program": "${workspaceFolder}/frontend/lib/main.dart",
+            "cwd": "${workspaceFolder}/frontend",
+            "flutterMode": "debug"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Run All (Django + Flutter)",
+            "configurations": [
+                "Run Django (Backend)",
+                "Run Flutter (Mobile)"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,25 @@
+{
+    // Cấu hình cho Backend (Django)
+    "python.defaultInterpreterPath": "${workspaceFolder}/backend/venv/Scripts/python.exe",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/backend"
+    ],
+    // Cấu hình cho Frontend (Flutter)
+    "dart.flutterSdkPath": "C:\\Games\\Flutter\\flutter",
+    // Cấu hình tự động format code khi lưu file (rất hữu ích)
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.autopep8"
+    },
+    "[dart]": {
+        "editor.defaultFormatter": "Dart-Code.dart-code",
+        "editor.formatOnSave": true
+    },
+    // Ẩn bớt các thư mục rác để thanh File Explorer gọn gàng hơn
+    "files.exclude": {
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/.dart_tool": true
+    },
+    "python-envs.defaultEnvManager": "ms-python.python:system"
+}

@@ -1,0 +1,6 @@
+#Bỏ qua file biến môi trường
+.env
+
+# Bỏ qua thư mục môi trường ảo Python
+venv/
+
