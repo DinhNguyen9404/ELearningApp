@@ -1,7 +1,7 @@
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class AppConfig {
-  static const String baseUrl = "http://192.168.1.160:8000";
+  static const String baseUrl = "https://elearningapp-lgx3.onrender.com/";
 
   static const int apiTimeoutSeconds = 15;
 
