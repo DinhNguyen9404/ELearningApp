@@ -701,7 +701,12 @@ def run_seed():
 
 
 if __name__ == "__main__":
-    print("🔨 Đang chạy Migrate để tạo lại các bảng (nếu chưa có)...")
+    print("Đang chạy Migrate để tạo lại các bảng (nếu chưa có)...")
     call_command('migrate', interactive=False)
-    print("🌱 Bắt đầu nạp dữ liệu...")
+    
+    print("Đang làm sạch dữ liệu cũ (an toàn cho Cloud)...")
+    # Lệnh flush sẽ xóa sạch dữ liệu trong các bảng mà không xóa Database
+    call_command('flush', interactive=False)
+    
+    print("Bắt đầu nạp dữ liệu...")
     run_seed()
